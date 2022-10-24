@@ -10,11 +10,12 @@ const GlobalStyle = createGlobalStyle`
     
     body {
       background: #1b1b1b;
+      font-family: "Inter", sans-serif;
     }
 
     button{
-      font-weight: 700;
-      font-size: 1.2rem;
+      font-weight: bold;
+      font-size: 0.8rem;
       padding: 1rem 2rem;
       border: 3px solid #23d997;
       background: transparent;
@@ -23,14 +24,14 @@ const GlobalStyle = createGlobalStyle`
       transition: all 0.5s ease;
       &:hover{
         background-color: #23d997;
-        color: white;
+        color: black;
       }
     }
 
     h2 {
       font-weight: lighter;
       color: white;
-      font-size: 4rem;
+      font-size: 2.8rem;
     }
 
     h3 {
@@ -39,10 +40,11 @@ const GlobalStyle = createGlobalStyle`
 
     h4 {
       font-weight: bold;
+      font-size: 1.5rem;
     }
 
     a{
-      font-size: 1.1rem;
+      font-size: 0.9rem;
     }
 
     span{
@@ -51,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: 1rem;
       color: #ccc;
       padding: 3rem 0rem;
       line-height: 150%;
