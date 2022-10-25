@@ -6,23 +6,31 @@ import athlete from '../img/athlete-small.png';
 import theracer from '../img/theracer-small.png';
 import goodtimes from '../img/goodtimes-small.png';
 
+import { Link } from 'react-router-dom';
+
 const OurWork = () => {
   return (
     <Work>
       <Movie>
         <h2>The Athlete</h2>
         <div className='line'></div>
-        <img src={athlete} alt='athlete' />
+        <Link to='the-athlete'>
+          <img src={athlete} alt='athlete' />
+        </Link>
       </Movie>
       <Movie>
         <h2>The racer</h2>
         <div className='line'></div>
-        <img src={theracer} alt='theracer' />
+        <Link to='the-racer'>
+          <img src={theracer} alt='theracer' />
+        </Link>
       </Movie>
       <Movie>
         <h2>Good Times</h2>
         <div className='line'></div>
-        <img src={goodtimes} alt='goodtimes' />
+        <Link to='good-times'>
+          <img src={goodtimes} alt='goodtimes' />
+        </Link>
       </Movie>
     </Work>
   );
