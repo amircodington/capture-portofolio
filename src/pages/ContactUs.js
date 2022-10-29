@@ -1,7 +1,21 @@
 import React from 'react';
 
+// animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
+
 const ContactUs = () => {
-  return <h1>Contact Us</h1>;
+  return (
+    <motion.div
+      variants={pageAnimation}
+      initial='hidden'
+      animate='show'
+      exit='exit'
+      style={{ backgroundColor: '#fff' }}
+    >
+      Contact Us
+    </motion.div>
+  );
 };
 
 export default ContactUs;
