@@ -10,7 +10,14 @@ import { Link } from 'react-router-dom';
 
 // animation
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../animation';
+import {
+  pageAnimation,
+  fade,
+  photoAnime,
+  lineAnim,
+  slider,
+  sliderContainer,
+} from '../animation';
 
 const OurWork = () => {
   return (
@@ -21,11 +28,21 @@ const OurWork = () => {
       exit='exit'
       style={{ backgroundColor: '#fff' }}
     >
+      <motion.div variants={sliderContainer}>
+        <Frame1 variants={slider}></Frame1>
+        <Frame2 variants={slider}></Frame2>
+        <Frame3 variants={slider}></Frame3>
+        <Frame4 variants={slider}></Frame4>
+      </motion.div>
       <Movie>
-        <h2>The Athlete</h2>
-        <div className='line'></div>
+        <motion.h2 variants={fade}>The Athlete</motion.h2>
+
+        <motion.div variants={lineAnim} className='line'></motion.div>
+
         <Link to='the-athlete'>
-          <img src={athlete} alt='athlete' />
+          <Hide>
+            <motion.img variants={photoAnime} src={athlete} alt='athlete' />
+          </Hide>
         </Link>
       </Movie>
       <Movie>
@@ -59,7 +76,7 @@ const Movie = styled.div`
   }
   .line {
     height: 0.5rem;
-    background-color: #ccc;
+    background-color: #23d997;
     margin-bottom: 2rem;
   }
 
@@ -68,6 +85,30 @@ const Movie = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  top: 8%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #fffebf;
+`;
+
+const Frame2 = styled(Frame1)`
+  background-color: #ff8efb;
+`;
+const Frame3 = styled(Frame1)`
+  background-color: #8ed2ff;
+`;
+const Frame4 = styled(Frame1)`
+  background-color: #8effa0;
 `;
 
 export default OurWork;
