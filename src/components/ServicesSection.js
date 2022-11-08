@@ -81,6 +81,9 @@ const Service = styled(About)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
@@ -94,6 +97,13 @@ const Card = styled.div`
     background: white;
     color: black;
     padding: 0.5rem 1rem;
+  }
+
+  @media (max-width: 1300px) {
+    h3 {
+      font-size: 80%;
+      margin-right: 5rem;
+    }
   }
 `;
 
